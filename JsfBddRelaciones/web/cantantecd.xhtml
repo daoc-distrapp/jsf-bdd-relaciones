@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>ManyToMany</title>
+    </h:head>
+    <h:body>
+
+        <h:form>
+            <table>
+                <tr>
+                    <td>
+                        <h3>Cantante ManyToMany Cds</h3>
+                        <h:selectOneMenu value="#{mbBdd.cantante}" converter="#{cantanteConverter}" >
+                            <f:selectItem itemLabel="---" noSelectionOption="true"/>
+                            <f:selectItems value="#{mbBdd.cantantes()}" var="a" itemLabel="#{a.nombre}" itemValue="#{a}" />
+                        </h:selectOneMenu>                  
+                        
+                    </td>
+                    <td>
+                        <h3>Cd ManyToMany Cantantes</h3>
+                        <h:selectOneMenu value="#{mbBdd.cd}" converter="#{cdConverter}" >
+                            <f:selectItem itemLabel="---" noSelectionOption="true"/>
+                            <f:selectItems value="#{mbBdd.cds()}" var="a" itemLabel="#{a.titulo}" itemValue="#{a}" />
+                        </h:selectOneMenu>                               
+                        
+                    </td>
+                </tr>
+            </table>
+            
+            <h:commandButton value="Relacionar" action="#{mbBdd.cantanteCd()}" />
+
+        </h:form>
+    </h:body>
+</html>
+

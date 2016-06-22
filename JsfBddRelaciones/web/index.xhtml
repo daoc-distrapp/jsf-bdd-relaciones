@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Crear nuevo Autor</title>
+    </h:head>
+    <h:body>
+        
+        <!-- 
+        http://docs.oracle.com/javaee/6/javaserverfaces/2.0/docs/pdldocs/facelets/h/link.html
+        
+        <h:link value="Hola" outcome="pag" /> genera:
+        <a href="/JsfBddRelaciones/faces/pag.xhtml">Hola</a> 
+        -->
+        
+        <h:link value="Autores -- Libros" outcome="one2many" /><br/>
+        <h:link value="Cantantes -- CDs" outcome="many2many" /><br/>
+        <h:link value="Crear Autor" outcome="nuevoautor" /><br/>
+        <h:link value="Crear Libro" outcome="nuevolibro" /><br/>
+        <h:link value="Crear Cantante" outcome="nuevocantante" /><br/>
+        <h:link value="Crear CD" outcome="nuevocd" /><br/>
+        <h:link value="Relacionar Cantante y CD" outcome="cantantecd" /><br/>
+    </h:body>
+</html>
+
