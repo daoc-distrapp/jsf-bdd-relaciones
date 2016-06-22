@@ -9,6 +9,14 @@
     <h:body>
         <h3>Autor OneToMany Libros</h3>
         <h:form>
+            
+            <!--
+            https://docs.oracle.com/javaee/7/javaserver-faces-2-2/vdldocs-facelets/h/selectOneMenu.html
+            https://docs.oracle.com/javaee/7/javaserver-faces-2-2/vdldocs-facelets/f/selectItem.html
+            https://docs.oracle.com/javaee/7/javaserver-faces-2-2/vdldocs-facelets/f/selectItems.html
+            https://docs.oracle.com/javaee/7/javaserver-faces-2-2/vdldocs-facelets/f/ajax.html
+            -->
+            
             <h:selectOneMenu value="#{mbBdd.autorId}" >
                 <f:selectItem itemLabel="---" noSelectionOption="true"/>
                 <f:selectItems value="#{mbBdd.autores()}" var="a" itemLabel="#{a.nombre}" itemValue="#{a.id}" />
